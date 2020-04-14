@@ -15,7 +15,7 @@ Time spent: **20** hours spent in total
   - [ ] Steps to recreate: Run ```wpscan --url http://wpdistillery.vm --enumerate u``` in the Kali Linux terminal.
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Required) Vulnerability Name or ID
+2. (Required) Vulnerability Name or ID
   - [ ] Summary: We can brute force passwords and get username and password combinations by using a wordlist of common passwords.
     - Vulnerability types: Bruteforce
     - Tested in version: 4.2
@@ -24,7 +24,7 @@ Time spent: **20** hours spent in total
   - [ ] Steps to recreate: Run ```wpscan --url http://wpdistillery.vm --passwords /home/kali/Desktop/rockyou.txt --usernames admin``` in the Kali Linux terminal.
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Required) Authenticated Stored Cross-Site Scripting (XSS)
+3. (Required) Authenticated Stored Cross-Site Scripting (XSS)
   - [ ] Summary: 
     - Vulnerability types: XSS
     - Tested in version: 4.2
@@ -47,7 +47,6 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while doing the work
 The main challenges that I encountered was setting up Vagrant, finding commands in Powershell that are equivalent to commands in Linux, and running the Kali Linux terminal as the administrator.
 
 ## License
