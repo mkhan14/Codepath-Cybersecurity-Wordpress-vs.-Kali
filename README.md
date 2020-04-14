@@ -1,56 +1,38 @@
 # Project 7 - WordPress Pentesting
 
-Time spent: **X** hours spent in total
+Time spent: **20** hours spent in total
 
 > Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
 
 ## Pentesting Report
 
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
+1. (Required) User Enumeration
+  - [ ] Summary: By using wpscan to enumerate all usernames, we can see if a user account exists on WordPress.
+    - Vulnerability types: User Enumeration
+    - Tested in version: 4.2
     - Fixed in version: 
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  - [ ] Steps to recreate: Run ```wpscan --url http://wpdistillery.vm --enumerate u``` in the Kali Linux terminal.
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
+  - [ ] Summary: We can brute force passwords and get username and password combinations by using a wordlist of common passwords.
+    - Vulnerability types: Bruteforce
+    - Tested in version: 4.2
     - Fixed in version: 
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  - [ ] Steps to recreate: Run ```wpscan --url http://wpdistillery.vm --passwords /home/kali/Desktop/rockyou.txt --usernames admin``` in the Kali Linux terminal.
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Required) Vulnerability Name or ID
+1. (Required) Authenticated Stored Cross-Site Scripting (XSS)
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
     - Fixed in version: 
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  - [ ] Steps to recreate: On the WordPress site, add a new post and put ```<a href="[caption code="]</a><a title=" onmouseover=alert('hi') ">link</a>``` into the body of the post. Then click preview to see the result. An alert pops up after hovering the mouse over "link".
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php) 
 
 ## Assets
 
@@ -66,10 +48,11 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while doing the work
+The main challenges that I encountered was setting up Vagrant, finding commands in Powershell that are equivalent to commands in Linux, and running the Kali Linux terminal as the administrator.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2020] [Mahin Khan]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
