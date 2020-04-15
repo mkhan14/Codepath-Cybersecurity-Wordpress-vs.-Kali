@@ -10,16 +10,16 @@ Time spent: **20** hours spent in total
   - [ ] Summary: By using wpscan to enumerate all usernames, we can see if a user account exists on WordPress.
     - Vulnerability types: User Enumeration
     - Tested in version: 4.2
-    - Fixed in version: 
+    - Fixed in version: 4.7.3 
   - [ ] GIF Walkthrough: <img src="enumerate.gif" width="800">
   - [ ] Steps to recreate: Run ```wpscan --url http://wpdistillery.vm --enumerate u``` in the Kali Linux terminal.
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-2. (Required) Vulnerability Name or ID
+2. (Required) Bruteforce Attack
   - [ ] Summary: We can brute force passwords and get username and password combinations by using a wordlist of common passwords.
     - Vulnerability types: Bruteforce
     - Tested in version: 4.2
-    - Fixed in version: 
+    - Fixed in version: 4.7.3
   - [ ] GIF Walkthrough: <img src="wordlist2.gif" width="800">
   - [ ] Steps to recreate: Run ```wpscan --url http://wpdistillery.vm --passwords /home/kali/Desktop/rockyou.txt --usernames admin``` in the Kali Linux terminal.
   - [ ] Affected source code:
@@ -28,7 +28,7 @@ Time spent: **20** hours spent in total
   - [ ] Summary: 
     - Vulnerability types: XSS
     - Tested in version: 4.2
-    - Fixed in version: 
+    - Fixed in version: 4.2.3
   - [ ] GIF Walkthrough: <img src="post.gif" width="800">
   - [ ] Steps to recreate: On the WordPress site, add a new post and put ```<a href="[caption code="]</a><a title=" onmouseover=alert('hi') ">link</a>``` into the body of the post. Then click preview to see the result. An alert pops up after hovering the mouse over "link".
   - [ ] Affected source code:
